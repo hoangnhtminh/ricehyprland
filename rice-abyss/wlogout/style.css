@@ -1,0 +1,60 @@
+/* ══════════════════════════════════════════
+   WLOGOUT — Abyss Theme
+   ══════════════════════════════════════════ */
+
+window {
+    background-color: rgba(7, 11, 20, 0.92);
+}
+
+button {
+    background-color:   rgba(14, 20, 33, 0.85);
+    border:             1px solid rgba(77, 159, 255, 0.2);
+    border-radius:      16px;
+    color:              #c8d8f8;
+    font-family:        "JetBrainsMono Nerd Font";
+    font-size:          14px;
+    font-weight:        600;
+    background-repeat:  no-repeat;
+    background-position:center;
+    background-size:    40%;
+    margin:             12px;
+    transition:         all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button:focus,
+button:active,
+button:hover {
+    background-color:   rgba(77, 159, 255, 0.14);
+    border:             1px solid rgba(77, 159, 255, 0.5);
+    color:              #4d9fff;
+    box-shadow:         0 0 20px rgba(77, 159, 255, 0.2);
+    outline-style:      none;
+}
+
+#lock     { background-image: url("/usr/share/wlogout/icons/lock.png"); }
+#logout   { background-image: url("/usr/share/wlogout/icons/logout.png"); }
+#suspend  { background-image: url("/usr/share/wlogout/icons/suspend.png"); }
+#hibernate{ background-image: url("/usr/share/wlogout/icons/hibernate.png"); }
+#reboot   { background-image: url("/usr/share/wlogout/icons/reboot.png"); }
+#shutdown { background-image: url("/usr/share/wlogout/icons/shutdown.png"); }
+
+#shutdown:hover {
+    background-color: rgba(255, 77, 106, 0.14);
+    border-color:     rgba(255, 77, 106, 0.5);
+    color:            #ff4d6a;
+    box-shadow:       0 0 20px rgba(255, 77, 106, 0.2);
+}
+
+#reboot:hover {
+    background-color: rgba(255, 154, 60, 0.14);
+    border-color:     rgba(255, 154, 60, 0.5);
+    color:            #ff9a3c;
+    box-shadow:       0 0 20px rgba(255, 154, 60, 0.2);
+}
+
+#lock:hover {
+    background-color: rgba(77, 255, 180, 0.10);
+    border-color:     rgba(77, 255, 180, 0.4);
+    color:            #4dffb4;
+    box-shadow:       0 0 20px rgba(77, 255, 180, 0.15);
+}

@@ -1,0 +1,28 @@
+/* ══════════════════════════════════════════
+   ROFI — Abyss Theme
+   ══════════════════════════════════════════ */
+
+configuration {
+    modi:                       "drun,run,window,emoji";
+    display-drun:               "󰀻  Apps";
+    display-run:                "  Run";
+    display-window:            "  Windows";
+    display-emoji:              "󰞅  Emoji";
+    show-icons:                 true;
+    icon-theme:                 "Papirus-Dark";
+    drun-display-format:        "{name}";
+    window-format:              "{w} · {c} · {t}";
+    font:                       "JetBrainsMono Nerd Font 12";
+    fixed-num-lines:            true;
+    lines:                      8;
+    columns:                    1;
+    cycle:                      true;
+    sort:                       true;
+    sorting-method:             "fzf";
+    case-sensitive:             false;
+    kb-primary-paste:           "Control+V";
+    kb-secondary-paste:         "Control+v";
+    terminal:                   "kitty";
+}
+
+@theme "/home/$USER/.config/rofi/themes/abyss.rasi"

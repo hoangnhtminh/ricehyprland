@@ -1,0 +1,39 @@
+##############################################
+# SWAYIDLE / HYPRIDLE — Abyss
+# Idle power management config
+##############################################
+
+# ── HYPRIDLE (preferred for Hyprland) ─────
+# Place at ~/.config/hypr/hypridle.conf
+
+# listener {
+#     timeout  = 150
+#     on-timeout = brightnessctl -s set 10
+#     on-resume  = brightnessctl -r
+# }
+#
+# listener {
+#     timeout  = 300
+#     on-timeout = hyprlock
+# }
+#
+# listener {
+#     timeout  = 600
+#     on-timeout  = hyprctl dispatch dpms off
+#     on-resume   = hyprctl dispatch dpms on
+# }
+#
+# listener {
+#     timeout  = 1800
+#     on-timeout = systemctl suspend
+# }
+
+
+# ── SWAYIDLE (fallback) ───────────────────
+# Used via exec-once in hyprland.conf
+
+# timeout 150 'brightnessctl -s set 10' resume 'brightnessctl -r'
+# timeout 300 'hyprlock'
+# timeout 600 'hyprctl dispatch dpms off' resume 'hyprctl dispatch dpms on'
+# before-sleep 'hyprlock'
+# after-resume 'hyprctl dispatch dpms on'

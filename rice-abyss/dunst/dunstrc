@@ -1,0 +1,126 @@
+##############################################
+# DUNST — Abyss Theme
+##############################################
+
+[global]
+    # ── Display ───────────────────────────
+    monitor             = 0
+    follow              = mouse
+    width               = (300, 420)
+    height              = 120
+    origin              = top-right
+    offset              = 12x50
+    scale               = 0
+    notification_limit  = 5
+
+    # ── Progress bar ──────────────────────
+    progress_bar                    = true
+    progress_bar_height             = 8
+    progress_bar_frame_width        = 0
+    progress_bar_min_width          = 150
+    progress_bar_max_width          = 300
+    progress_bar_corner_radius      = 4
+    progress_bar_corners            = all
+    icon_corner_radius              = 6
+    icon_corners                    = all
+
+    # ── Appearance ────────────────────────
+    transparency        = 12
+    separator_height    = 1
+    padding             = 14
+    horizontal_padding  = 16
+    text_icon_padding   = 12
+    frame_width         = 1
+    frame_color         = "#2a3a5c"
+    gap_size            = 6
+    separator_color     = frame
+    sort                = yes
+    idle_threshold      = 120
+
+    # ── Typography ────────────────────────
+    font                = JetBrainsMono Nerd Font 11
+    line_height         = 0
+    markup              = full
+    format              = "<b>%s</b>\n%b"
+    alignment           = left
+    vertical_alignment  = center
+    show_age_threshold  = 60
+    ellipsize           = middle
+    ignore_newline      = no
+    stack_duplicates    = true
+    hide_duplicate_count = false
+    show_indicators     = yes
+
+    # ── Icons ─────────────────────────────
+    icon_theme          = Papirus-Dark,Papirus,hicolor
+    enable_recursive_icon_lookup = true
+    icon_position       = left
+    min_icon_size       = 32
+    max_icon_size       = 48
+    icon_path           = /usr/share/icons/Papirus-Dark/16x16/status/:/usr/share/icons/Papirus-Dark/16x16/devices/:/usr/share/icons/Papirus-Dark/16x16/apps/
+
+    # ── History ───────────────────────────
+    sticky_history      = yes
+    history_length      = 20
+
+    # ── Misc ──────────────────────────────
+    always_run_script   = true
+    title               = Dunst
+    class               = Dunst
+    corner_radius       = 12
+    corners             = all
+    ignore_dbusclose    = false
+    force_xwayland      = false
+    force_xinerama      = false
+    verbosity           = mesg
+    mouse_left_click    = close_current
+    mouse_middle_click  = do_action, close_current
+    mouse_right_click   = close_all
+
+    # ── Timeouts ──────────────────────────
+    # (per urgency below)
+
+[urgency_low]
+    background          = "#070b14ee"
+    foreground          = "#7a8aaa"
+    frame_color         = "#1d2740"
+    timeout             = 4
+    default_icon        = dialog-information
+
+[urgency_normal]
+    background          = "#0e1421f0"
+    foreground          = "#c8d8f8"
+    frame_color         = "#2a3a5c"
+    timeout             = 6
+    default_icon        = dialog-information
+
+[urgency_critical]
+    background          = "#1a0a0ef0"
+    foreground          = "#ff4d6a"
+    frame_color         = "#ff4d6a"
+    timeout             = 0
+    default_icon        = dialog-error
+
+# ── APP-SPECIFIC RULES ─────────────────────
+[spotify]
+    appname             = Spotify
+    urgency             = low
+    timeout             = 5
+    format              = " %s\n%b"
+    frame_color         = "#1ed760"
+
+[volume]
+    appname             = Volumectl
+    urgency             = low
+    timeout             = 2
+    format              = "%s\n%b"
+
+[brightness]
+    summary             = "Brightness*"
+    urgency             = low
+    timeout             = 2
+
+[network]
+    appname             = NetworkManager
+    urgency             = normal
+    timeout             = 5

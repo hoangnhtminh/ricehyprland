@@ -1,0 +1,177 @@
+/* ══════════════════════════════════════════
+   ROFI THEME — ABYSS
+   ══════════════════════════════════════════ */
+
+* {
+    bg:          rgba(7,  11, 20, 92%);
+    bg-alt:      rgba(14, 20, 33, 98%);
+    bg-item:     rgba(29, 39, 64, 70%);
+    bg-sel:      rgba(77, 159, 255, 18%);
+    border-col:  rgba(77, 159, 255, 35%);
+    fg:          #c8d8f8;
+    fg-dim:      #7a8aaa;
+    blue:        #4d9fff;
+    purple:      #a57fff;
+    green:       #4dffb4;
+    red:         #ff4d6a;
+    cyan:        #00d4ff;
+
+    font:            "JetBrainsMono Nerd Font 12";
+    background-color: transparent;
+    text-color:       @fg;
+    border:           0;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+/* ── WINDOW ──────────────────────────────── */
+window {
+    background-color: @bg;
+    border:           1px solid @border-col;
+    border-radius:    16px;
+    width:            520px;
+    padding:          16px;
+    location:         center;
+    anchor:           center;
+    x-offset:         0;
+    y-offset:         0;
+}
+
+/* ── MAINBOX ─────────────────────────────── */
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, message, listview ];
+    spacing:          10px;
+}
+
+/* ── INPUTBAR ────────────────────────────── */
+inputbar {
+    background-color: @bg-item;
+    border-radius:    12px;
+    border:           1px solid @border-col;
+    children:         [ prompt, entry ];
+    padding:          10px 14px;
+    spacing:          8px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @blue;
+    font:             "JetBrainsMono Nerd Font Bold 13";
+    vertical-align:   0.5;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder-color: @fg-dim;
+    placeholder:      "Search...";
+    vertical-align:   0.5;
+    cursor:           text;
+}
+
+/* ── LISTVIEW ────────────────────────────── */
+listview {
+    background-color: transparent;
+    lines:            8;
+    columns:          1;
+    spacing:          4px;
+    scrollbar:        false;
+    dynamic:          true;
+}
+
+/* ── ELEMENT ─────────────────────────────── */
+element {
+    background-color: transparent;
+    border-radius:    10px;
+    padding:          8px 12px;
+    spacing:          10px;
+    orientation:      horizontal;
+    children:         [ element-icon, element-text ];
+    cursor:           pointer;
+    transition:       background-color 0.15s ease;
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @fg;
+}
+
+element selected.normal {
+    background-color: @bg-sel;
+    text-color:       @blue;
+    border:           1px solid rgba(77,159,255,0.3);
+}
+
+element normal.urgent,
+element alternate.urgent {
+    text-color: @red;
+}
+
+element selected.urgent {
+    background-color: rgba(255,77,106,0.15);
+    text-color:       @red;
+}
+
+element normal.active,
+element alternate.active {
+    text-color: @green;
+}
+
+element selected.active {
+    background-color: rgba(77,255,180,0.12);
+    text-color:       @green;
+}
+
+element-icon {
+    background-color: transparent;
+    size:             28px;
+    vertical-align:   0.5;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    vertical-align:   0.5;
+    highlight:        bold @blue;
+}
+
+/* ── MESSAGE ─────────────────────────────── */
+message {
+    background-color: transparent;
+}
+
+textbox {
+    background-color: rgba(77,159,255,0.08);
+    border:           1px solid @border-col;
+    border-radius:    8px;
+    text-color:       @fg-dim;
+    padding:          6px 12px;
+    font:             "JetBrainsMono Nerd Font 11";
+}
+
+/* ── MODE SWITCHER ───────────────────────── */
+mode-switcher {
+    background-color: transparent;
+    spacing:          6px;
+}
+
+button {
+    background-color: @bg-item;
+    text-color:       @fg-dim;
+    border-radius:    8px;
+    padding:          6px 14px;
+    cursor:           pointer;
+}
+
+button selected {
+    background-color: rgba(77,159,255,0.18);
+    text-color:       @blue;
+    border:           1px solid @border-col;
+}
